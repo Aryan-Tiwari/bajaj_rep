@@ -6,17 +6,20 @@ const app = express();
 app.use(bodyParser.json());
 
 app.get("/", (req, res)=>{
-    res.send("hi")
+    res.send("hi hit the challenge route for the assessment.")
 })
 
-arr = []
-chars = []
-nums = []
-charscount = 0
-numscount = 0
+    arr = []
+    chars = []
+    nums = []
+    charscount = 0
+    numscount = 0
+
 
 app.post("/challenge", (req, res) => {
     // console.log(req.body)
+    
+    
     const arr = req.body.data;
     for(var i=0; i<arr.length; i++){
         if(typeof arr[i] === 'number'){
