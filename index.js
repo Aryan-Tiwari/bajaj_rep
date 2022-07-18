@@ -9,20 +9,20 @@ app.get("/", (req, res)=>{
     res.send("hi hit the challenge route for the assessment.")
 })
 
-    arr = []
-    chars = []
-    nums = []
-    charscount = 0
-    numscount = 0
-
 
 app.post("/challenge", (req, res) => {
     // console.log(req.body)
-    
+
+    let arri = []
+    let chars = []
+    let nums = []
+    let charscount = 0
+    let numscount = 0
+        
     
     const arr = req.body.data;
     for(var i=0; i<arr.length; i++){
-        if(typeof arr[i] === 'number'){
+        if(!isNaN(arr[i])){
             nums.push(arr[i])
             numscount++
             
