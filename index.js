@@ -20,8 +20,8 @@ charscount = 0
 numscount = 0
 
 app.post("/challenge", (req, res) => {
-    
-    const [...arr] = req.body;
+    // console.log(req.body)
+    const arr = req.body.data;
     for(var i=0; i<arr.length; i++){
         if(typeof arr[i] === 'number'){
             nums.push(arr[i])
