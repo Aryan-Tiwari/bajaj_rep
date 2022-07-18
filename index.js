@@ -5,10 +5,6 @@ const app = express();
 
 app.use(bodyParser.json());
 
-app.listen(5000, () => {
-  console.log(`Server is running on port 5000.`);
-});
-
 app.get("/", (req, res)=>{
     res.send("hi")
 })
@@ -52,3 +48,10 @@ app.post("/challenge", (req, res) => {
 
     })
 });
+
+
+
+app.listen(process.env.PORT || 5000, () => {
+    console.log(`Server is running on port 5000.`);
+  });
+  
